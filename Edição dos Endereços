@@ -1,0 +1,148 @@
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+#script pra limpar os endereços 
+def limpa(x):
+    corr= ''
+    '''
+    p=["S/N","S/n","s/n","s/N"," SN"," Sn"," sN"," sn"]
+    '''
+    y=x
+    lista= y.split(' ',1000000) #divide a string onde tem espaço
+    for l in lista:
+        l = l.replace('.','') #tira o ponto de numeros que tem ponto
+        if l.isdigit(): #verificando se é um numero
+            corr= corr+' '+l
+            return corr #retorna o valor
+            break
+        
+        else:
+            if "AVN" == l:
+                corr = corr + "AVENIDA"
+                
+            elif "PRC" == l:
+                corr = corr + "PRAÇA"
+                
+            
+            elif "MARQ" == l:
+                corr = corr  + ' ' +  "MARQUES"
+                
+            
+            elif "ALMTE" == l:
+                corr = corr + ' ' + "ALMIRANTE"
+                
+
+            elif "BRIG" == l:
+                corr = corr + ' ' + "BRIGADEIRO"
+                
+
+            elif "VISC" == l:
+                corr = corr + ' ' + "VISCONDE"
+
+            elif "ETR" == l:
+                corr = corr + ' ' + "ESTRADA"
+
+            elif "PROF" == l:
+                corr = corr + ' ' + "PROFESSOR"
+                
+            elif "CEL" == l:
+                corr = corr + ' ' + "CORONEL"
+
+            elif "PRA" == l:
+                corr = corr + ' ' + "PRAIA"
+
+            elif "GAL" == l:
+                corr = corr + ' ' + "GENERAL"
+
+            elif "CAP" == l:
+                corr = corr + ' ' + "CAPITAO"
+
+            elif "CMP" == l:
+                corr = corr + ' ' + "CAMPO"
+
+            elif "PQE" == l:
+                corr = corr + ' ' + "PARQUE"
+
+            elif "EST" == l:
+                corr = corr + ' ' + "ESTRADA"
+                
+            elif "REGENT" == l:
+                corr = corr + ' ' + "REGENTE"
+                
+            elif "INTEND" == l:
+                corr = corr + ' ' + "INTENDENTE"
+
+            elif "MONSEN" == l:
+                corr = corr + ' ' + "MONSENHOR"
+
+            elif "COMEND" == l:
+                corr = corr + ' ' + "COMENDADOR"
+
+            elif "SENAD" == l:
+                corr = corr + ' ' + "SENADOR"
+                
+            elif "ENGEN" == l:
+                corr = corr + ' ' + "ENGENHEIRO"
+
+            elif "LRG" == l:
+                corr = corr + ' ' + "LARGO"
+
+            elif "SARG" == l:
+                corr = corr + ' ' + "SARGENTO"
+
+            elif "MAL" == l:
+                corr = corr + ' ' + "MARECHAl"
+
+            elif "N/S" == l:
+                corr = corr + ' ' + "NOSSA SENHORA"
+
+            elif "MINIST" == l:
+                corr = corr + ' ' + "MINISTRO"
+
+            elif "CONSEL" == l:
+                corr = corr + ' ' + "CONSELHEIRO"
+
+            elif "TRV" == l:
+                corr = corr + ' ' + "TRAVESSA"
+
+            elif "COMTE" == l:
+                corr = corr + ' ' + "COMANDANTE"
+
+            elif "COMEND" == l:
+                corr = corr + ' ' + "COMENDADOR"
+
+            elif "SENAD" == l:
+                corr = corr + ' ' + "SENADOR"
+                
+            elif "ENGEN" == l:
+                corr = corr + ' ' + "ENGENHEIRO"
+
+            elif "LRG" == l:
+                corr = corr + ' ' + "LARGO"
+
+            elif "SARG" == l:
+                corr = corr + ' ' + "SARGENTO"
+
+            elif "MAL" == l:
+                corr = corr + ' ' + "MARECHAl"
+
+            elif "N/S" == l:
+                corr = corr + ' ' + "NOSSA SENHORA"
+
+            elif "MINIST" == l:
+                corr = corr + ' ' + "MINISTRO"
+
+            elif "CONSEL" == l:
+                corr = corr + ' ' + "CONSELHEIRO"
+
+            elif "TRV" == l:
+                corr = corr + ' ' + "TRAVESSA"
+
+            elif "COMTE" == l:
+                corr = corr + ' ' + "COMANDANTE"        
+                
+            else:
+                corr= corr+' '+ l
+                    
+            
+    return corr #retornando a string final
